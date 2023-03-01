@@ -1,0 +1,23 @@
+<%= render 'shared/banner', name: "Categories", amount: nil%>
+<% if @groups.empty? %>
+  <h6 class="p-5 text-danger">You have not added any Category.</h6>
+<% end %>
+<% @groups.each do |group| %>
+    <div class="d-flex justify-content-between align-items-center text-center m-3 p-3 item-container" id="<%= dom_id group %>">
+      <%= link_to group_expenses_path(group), class: "d-flex justify-content-between align-items-center text-center text-black", style: "text-decoration: none" do %>
+          <%# <%= image_tag (group.icon), height: "80", width: "80", class: "rounded-circle"%> %>
+          <div class="d-flex justify-content-between w-100">
+            <h5 class="px-5"><%= group.name %></h5><span style="font-size: 13px; float: right; font-weight: bold">$<%= group.total_expenses %></span>
+          </div>
+      <%end%>
+      <div class="d-flex">
+        <%= link_to edit_group_path(group), class: "btn btn-outline-primary", style: "margin-right: 10px" do %>
+          <i class="fa fa-edit"></i>
+        <%end%>
+        <%= button_to group_path(group), method: :delete, class: "btn btn-outline-danger" do %>
+          <i class="fa fa-trash"></i>
+        <%end%>
+      </div>
+    </div>
+<%end%>
+<%= render 'shared/footer'%>
