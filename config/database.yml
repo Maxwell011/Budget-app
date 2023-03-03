@@ -25,8 +25,6 @@ development:
   <<: *default
   database: Budget_app_development
   # host: localhost
-  username: postgres
-  password: valuation000
   # port: 5432
 
   # The specified database role being used to connect to postgres.
@@ -62,8 +60,6 @@ development:
 test:
   <<: *default
   database: Budget_app_test
-  username: postgres
-  password: valuation000
   # port: 5432
 
 # As with config/credentials.yml, you never want to store sensitive information,

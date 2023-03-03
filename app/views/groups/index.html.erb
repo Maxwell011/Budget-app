@@ -5,7 +5,6 @@
 <% @groups.each do |group| %>
     <div class="d-flex justify-content-between align-items-center text-center m-3 p-3 item-container" id="<%= dom_id group %>">
       <%= link_to group_expenses_path(group), class: "d-flex justify-content-between align-items-center text-center text-black", style: "text-decoration: none" do %>
-          <%# <%= image_tag (group.icon), height: "80", width: "80", class: "rounded-circle"%> %>
           <div class="d-flex justify-content-between w-100">
             <h5 class="px-5"><%= group.name %></h5><span style="font-size: 13px; float: right; font-weight: bold">$<%= group.total_expenses %></span>
           </div>

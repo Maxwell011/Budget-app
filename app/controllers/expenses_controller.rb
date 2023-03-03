@@ -12,11 +12,10 @@ class ExpensesController < ApplicationController
 
   def create
     @author = current_user
-    @category = Group.find((params[:expense][:category])[1])
-    @expense = Expense.new(author: @author, **expense_params)
+    @expense = @author.expenses.new expense_params
     if @expense.save
-      @group_expense = GroupExpense.create(group: @category, expense: @expense)
-      redirect_to group_expenses_url(@group), notice: 'Transaction was successfully created.'
+      @group_expense = GroupExpense.create(group: @group, expense: @expense)
+      redirect_to group_expenses_path(@group.id), notice: 'Transaction was successfully created.'
     else
       render :new, status: :unprocessable_entity
     end

@@ -13,9 +13,6 @@
  *= require_tree .
  *= require_self
  */
-
-@import "font-awesome";
-@import "bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 body {
@@ -28,22 +25,8 @@ body {
   padding: 0;
 }
 
-.splash-img {
-  text-align: center;
-  margin-top: 40vh;
-  height: 10vh;
-}
-
-.splash-img img {
-  height: 100%;
-}
-
 .bottom-btns {
-  position: fixed;
-  width: 30.5%;
-  bottom: 0;
-  background-color: #5fb523;
-  margin: 0;
+  background-color: crimson;
 }
 
 .auth-btns {
@@ -77,7 +60,7 @@ nav {
 
 .splash-footer {
   position: fixed;
-  width: 30.5%;
+  width: 27.5%;
   bottom: 0;
   background-color: #3778c2;
   margin: 0;
