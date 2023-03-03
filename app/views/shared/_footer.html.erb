@@ -1,0 +1,14 @@
+<footer class="bottom-btns p-2">
+  <div class="d-flex justify-content-center text-white">
+  <%if controller_name == 'groups'%>
+    <% link_path = new_group_path %>
+    <% button_name = "Add New Category" %>
+  <%else%>
+    <% link_path = new_group_expense_path %>
+    <% button_name = "Add New Transaction" %>
+  <%end%>
+  <%= link_to link_path, class: "footer-btn" do%>
+    <span class="text-center"> <%= button_name %> </span>
+  <%end%>
+  </div>
+</footer>

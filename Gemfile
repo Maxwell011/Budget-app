@@ -23,10 +23,13 @@ gem 'importmap-rails'
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem 'turbo-rails'
 
+# Bootstrap 5 [
+gem 'bootstrap', '~> 5.1.3'
+
 # Add Devise
 gem 'devise'
 
-gem 'font-awesome-sass', '~> 6.3.0'
+# gem 'font-awesome-sass', '~> 6.3.0'
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem 'stimulus-rails'

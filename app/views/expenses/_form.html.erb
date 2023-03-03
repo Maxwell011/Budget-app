@@ -1,0 +1,12 @@
+<div class="mb-3">
+  <%= form.label :name, class: "form-label" %><br />
+  <%= form.text_field :name, autofocus: true, autocomplete: "name", class: "form-control" %>
+</div>
+<div class="mb-3">
+  <%= form.label :amount, class: "form-label" %><br />
+  <%= form.number_field :amount, autofocus: true, autocomplete: "amount", class: "form-control" %>
+</div>
+<div class="mb-3">
+  <%= form.label :category, class: "form-label" %><br />
+  <%= form.select :category, Group.includes(:group_expenses).where(author_id: current_user.id).order(created_at: :desc).order(name: :asc).map {|category| [ category.name, category.id ] }, {}, class: "form-select", multiple: "multiple" %>
+</div>

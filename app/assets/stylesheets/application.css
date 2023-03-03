@@ -13,6 +13,61 @@
  *= require_tree .
  *= require_self
  */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-@import "font-awesome";
-@import "bootstrap";
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.main-screen {
+  background-color: #eee;
+  min-height: 100vh;
+  padding: 0;
+}
+
+.bottom-btns {
+  background-color: crimson;
+}
+
+.auth-btns {
+  position: absolute;
+  top: 88vh;
+  width: 33%;
+}
+
+nav {
+  height: 80px;
+  width: 100%;
+  background-color: #3778c2;
+}
+
+.item-container {
+  background-color: #fff;
+}
+
+.footer-btn {
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+  border: 1px solid #fff;
+  padding: 10px 0;
+}
+
+.footer-btn:hover {
+  color: #fff;
+}
+
+.splash-footer {
+  position: fixed;
+  width: 27.5%;
+  bottom: 0;
+  background-color: #3778c2;
+  margin: 0;
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+  color: #fff;
+}
