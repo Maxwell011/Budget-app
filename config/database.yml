@@ -25,8 +25,8 @@ development:
   <<: *default
   database: Budget_app_development
   # host: localhost
-  username: postgres
-  password: valuation000
+  # username: postgres
+  # password: valuation000
   # port: 5432
 
   # The specified database role being used to connect to postgres.
@@ -62,8 +62,8 @@ development:
 test:
   <<: *default
   database: Budget_app_test
-  username: postgres
-  password: valuation000
+  # username: postgres
+  # password: valuation000
   # port: 5432
 
 # As with config/credentials.yml, you never want to store sensitive information,
@@ -79,9 +79,8 @@ test:
 # variable, Rails will automatically merge its configuration values on top of
 # the values provided in this file. Alternatively, you can specify a connection
 # URL environment variable explicitly:
-#
 #   production:
-#     url: <%= ENV["MY_APP_DATABASE_URL"] %>
+#
 #
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
@@ -92,3 +91,4 @@ production:
   database: Budget_app_production
   username: Budget_app
   password: <%= ENV["BUDGET_APP_DATABASE_PASSWORD"] %>
+  url: <%= ENV["DATABASE_URL"] %>
