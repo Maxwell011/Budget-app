@@ -2,13 +2,13 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   before :each do
-    @user = User.new(name: 'John Doe', email: 'test@email.com', password: 'secret')
+    @user = User.new(name: 'John Doe', email: 'testing@email.com', password: 'secret')
   end
 
   context 'Testing Validations' do
     it 'is valid with valid attributes' do
       @user.save
-      expect(@user).to_not be_valid
+      expect(@user).to be_valid
     end
 
     it 'is not valid without a name' do
