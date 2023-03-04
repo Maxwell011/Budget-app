@@ -1,0 +1,7 @@
+<div class="d-flex justify-content-between align-items-center p-3">
+  <h6><%= name %></h6>
+  <h6 class="badge rounded-pill text-bg-success"><%= current_user.name %></h6>
+  <%if amount%>
+  <h6>Total: $ <%= amount %> </h6>
+  <%end%>
+</div>

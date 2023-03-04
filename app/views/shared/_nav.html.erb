@@ -1,0 +1,32 @@
+<nav>
+  <div class="row p-3 text-white">
+    <div class="col-4">
+      <%if controller_name == 'groups' and action_name == 'index' %>
+        <i class="fa fa-bars fa-2x"></i>
+      <%elsif controller_name == 'groups' and action_name != 'index' %>
+        <%= link_to groups_path do %>
+          <i class="fa fa-arrow-left text-white fa-2x"></i>
+        <%end%>
+      <%elsif controller_name == 'expenses' and action_name == 'index' %>
+        <%= link_to groups_path do %>
+          <i class="fa fa-arrow-left text-white fa-2x"></i>
+        <%end%>
+      <%elsif controller_name == 'expenses' and action_name != 'index' %>
+        <%= link_to group_expenses_path do %>
+          <i class="fa fa-arrow-left text-white fa-2x"></i>
+        <%end%>
+      <% end %>
+    </div>
+    <div class="col-4">
+      <h2>ENHANCE</h2>
+    </div>
+    <div class="col-4" style="text-align: right">
+    <%if current_user %>
+      <%= button_to destroy_user_session_path, data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, class: "logout-btn" do%>
+          <i class="fa fa-sign-out fa-2x" aria-hidden="true"></i>
+      <%end%>
+    <%else%>
+    <%end%>
+    </div>
+  </div>
+</nav>

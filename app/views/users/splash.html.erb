@@ -1,0 +1,24 @@
+<% content_for :title, 'Plan Me' %>
+
+<% if current_user %>
+  <footer class="bottom-btns p-2">
+    <div class="d-flex justify-content-center text-white mb-3">
+      <%= link_to groups_path, class: "footer-btn" do%>
+        <span class="text-center"> Categories </span>
+      <%end%>
+    </div>
+  </footer>
+<% else %>
+  <footer class="splash-footer p-2">
+    <div class="d-flex justify-content-center text-white mb-3">
+      <%= link_to new_user_session_path, class: "footer-btn" do%>
+        <span class="text-center"> Login </span>
+      <%end%>
+    </div>
+    <div class="d-flex justify-content-center text-white">
+      <%= link_to new_user_registration_path, class: "footer-btn" do%>
+        <span class="text-center"> Signup </span>
+      <%end%>
+    </div>
+  </footer>
+  <% end %>
