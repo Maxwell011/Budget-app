@@ -53,9 +53,9 @@ After you're finished please remove all the comments and instructions!
 
 **ENHANCE** is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.The Ruby on Rails application that allows the user to:
 
-- register and log in, so that the data is private to them.
-- introduce new transactions associated with a category.
-- see the money spent on each category.
+- Register and log in, so that the data is private to them.
+- Introduce new transactions associated with a category.
+- Track the money spent on each category.
 
 ## 🛠 Built With <a name="built-with"></a>
 
